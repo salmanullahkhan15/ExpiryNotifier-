@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/texpotppl/Desktop/Personal/Projects/Facebook/Benish/BarcodeProject/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
+            "map": [
+                {
+                    "source": "/Users/texpotppl/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/903ab892e946389d674c3ed8af898863/res/values-zu/values-zu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

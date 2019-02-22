@@ -1,0 +1,91 @@
+<ion-header no-border  >
+  <ion-navbar no-padding no-margin hideBackButton>
+    <h1 text-center >{{ heading }}</h1>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides class="swiper-no-swiping">
+          <ion-slide>
+            <ion-grid>
+              <ion-row justify-content-center>
+                  <img src="assets/imgs/logo.png" no-margin no-padding >
+              </ion-row>
+              <ion-row justify-content-center>
+                  Welcome, Please Select An Option
+              </ion-row>
+              <ion-row justify-content-center align-items-center padding>
+                <button ion-button color="dark" outline (click)="toRegister()">I'm New User</button>
+                <button ion-button color="dark" outline (click)="toLogin()">I'm Registered User</button>
+              </ion-row>
+            </ion-grid>
+          </ion-slide>
+          <ion-slide>
+            <ion-grid>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Name*</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.name" color="dark"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Email Address*</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.email" color="dark"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Password*</ion-label>
+                  <ion-input type="password" [(ngModel)]="user.password" color="dark"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Gender</ion-label>
+                  <ion-select [(ngModel)]="user.gender" color="dark">
+                    <ion-option value="Male">Male</ion-option>
+                    <ion-option value="female">Female</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Address</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.address" color="dark"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center align-items-center padding>
+                <button ion-button color="dark" outline (click)="toMainSlide()">Back</button>
+                <button ion-button color="dark" outline (click)="RegisterUser(user)">Register</button>
+              </ion-row>
+            </ion-grid>
+          </ion-slide>
+          <ion-slide>
+            <ion-grid>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Email Address</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center>
+                <ion-item>
+                  <ion-label floating>Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+                </ion-item>
+              </ion-row>
+              <ion-row justify-content-center align-items-center padding>
+                <button ion-button color="dark" outline (click)="toMainSlide()">Back</button>
+                <button ion-button color="dark" outline (click)="LoginUser(user)">Login</button>
+              </ion-row>
+            </ion-grid>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+      <ion-label>Sound</ion-label>
+      <ion-toggle checked="false" color="dark"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pop-up on Scan</ion-label>
+      <ion-toggle checked="false" color="dark"></ion-toggle>
+    </ion-item>
+    <ion-grid>
+      <ion-row stacked>
+            <button ion-button color="dark" outline col-5 offset-1 (click)="btnSave()">Save</button>
+            <button ion-button color="dark" outline col-5 offset-0 (click)="btnCancel()">Cancel</button>
+      </ion-row>
+    </ion-grid>
+</ion-content>

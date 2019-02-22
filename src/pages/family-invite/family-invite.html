@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Invite a Family Member</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="familyCode">
+    <ngx-qrcode [qrc-value]="familyCode"></ngx-qrcode>
+  </ion-card>
+</ion-content>

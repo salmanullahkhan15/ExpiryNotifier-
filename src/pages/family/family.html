@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Family</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4 ion-text color="dark"> Your Family</h4>
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let user of users">
+      <ion-item [ngClass]="{selected: user.selected, item: !user.selected}">
+        <ion-label col>{{ user.name }}</ion-label>
+      </ion-item>
+      <ion-item-options side="right" *ngIf="isTrue != true" >
+        <span *ngIf="user.id != currentUserID" >
+          <button ion-button color="dark" (click)="DeleteUser(user)">
+            Delete
+          </button>
+        </span>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-item stacked>
+    <button ion-button color="dark" outline col-4 (click)="InviteUser()">Invite User</button>
+    <button ion-button color="dark" outline col-6 (click)="JoinFamily()">Join Another Family</button>
+  </ion-item>
+</ion-content>
